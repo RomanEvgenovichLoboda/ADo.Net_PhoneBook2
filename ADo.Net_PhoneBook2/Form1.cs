@@ -18,10 +18,14 @@ namespace ADo.Net_PhoneBook2
             InitializeComponent();
             UpdateTable();
         }
-        private void UpdateTable(int n = 0)
+        private void UpdateTable(int n = 0,string name = "")
         {
             string command = ""; 
-            if(n == 0) { command = "SELECT * FROM [Telephones2]"; }
+            if(n == 0)
+            {
+                if (name == "") { command = "SELECT * FROM [Telephones2]"; }
+                else { command = $"DELETE FROM [Telephones2] WHERE LastName = '{name}';SELECT* FROM[Telephones2]"; }
+            }
             if (n == 1) { command = "SELECT * FROM [Telephones2] ORDER BY Name"; }
             if (n == 2) { command = "SELECT * FROM [Telephones2] ORDER BY SecondName"; }
             if (n == 3) { command = "SELECT * FROM [Telephones2] ORDER BY LastName"; }
@@ -52,6 +56,13 @@ namespace ADo.Net_PhoneBook2
             SortAbons sortAbon = new SortAbons();
             sortAbon.ShowDialog();
             UpdateTable(sortAbon.rb);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DelAboncs delab = new DelAboncs();
+            delab.ShowDialog();
+            UpdateTable(0, delab.lastName);
         }
     }
 }

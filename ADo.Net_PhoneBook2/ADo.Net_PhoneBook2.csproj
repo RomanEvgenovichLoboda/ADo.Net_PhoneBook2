@@ -52,6 +52,12 @@
     <Compile Include="AddNewAbon.Designer.cs">
       <DependentUpon>AddNewAbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="DelAboncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelAboncs.Designer.cs">
+      <DependentUpon>DelAboncs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <EmbeddedResource Include="AddNewAbon.resx">
       <DependentUpon>AddNewAbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelAboncs.resx">
+      <DependentUpon>DelAboncs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
