@@ -39,5 +39,11 @@ namespace ADo.Net_PhoneBook2
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddNewAbon newForm = new AddNewAbon();
+            newForm.ShowDialog();
+        }
     }
 }
