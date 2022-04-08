@@ -32,7 +32,7 @@ namespace ADo.Net_PhoneBook2
                     cmd.Parameters.AddWithValue("@Name", textBox1.Text);
                     cmd.Parameters.AddWithValue("@SecondName", textBox2.Text);
                     cmd.Parameters.AddWithValue("@LastName", textBox3.Text);
-                    cmd.Parameters.AddWithValue("@BirthDate", textBox4.Text);
+                    cmd.Parameters.AddWithValue("@BirthDate", DateTime.Parse(textBox4.Text));
                     cmd.Parameters.AddWithValue("@TelNumber", textBox5.Text);
                     cmd.Parameters.AddWithValue("@Adress", textBox6.Text);
                     cmd.Parameters.AddWithValue("@Car", textBox7.Text);
@@ -44,6 +44,7 @@ namespace ADo.Net_PhoneBook2
                     if (conn != null)
                     {
                         conn.Close();
+                        this.Close();
                        // UpdateTable();
                     }
                 }
