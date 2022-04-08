@@ -44,6 +44,7 @@ namespace ADo.Net_PhoneBook2
         {
             AddNewAbon newForm = new AddNewAbon();
             newForm.ShowDialog();
+            UpdateTable();
         }
     }
 }
